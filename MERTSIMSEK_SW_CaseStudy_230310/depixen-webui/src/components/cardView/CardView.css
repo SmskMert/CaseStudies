@@ -1,0 +1,17 @@
+.card-with-data {
+    background-color: #DCD7C9;
+    border-radius: 0 10px 10px 10px;
+    padding: 20px 15px 15px 15px;
+    border: 1px solid #fff;
+    height:355px ;
+    width: 272px;
+  }
+  
+
+
+  .main-image-background{
+    background-color: #A27B5C;
+    height: 180px;
+    width: 240px;
+    border-radius: 5px;
+  }

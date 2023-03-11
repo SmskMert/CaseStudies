@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+  color: #fff;
+}
+
+.page{
+  background-color: #2C3639;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height: 100vh;
+  row-gap: 100px;
+}
+
+.title-above-card{
+  width: 40%;
+  display:inline-block;
+  background-color: #DCD7C9;
+  font-weight: 400;
+  font-size: 12px ;
+  padding: 5px 20px  5px;
+  border-radius: 5px 5px 0 0;
+  color: #2C3639;
+  border: 1px solid #fff;
+  border-bottom: none;
+}
+
+.title-in-card{
+  background-color: #A27B5C;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px 5px 8px 5px ;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  width: 240px;
+  height: 33.75px;
+}
+
+.description-in-card{
+  background-color: #3F4E4F ;
+  height: 80px;
+  border-radius: 5px;
+  padding: 5px 0 65px 5px ;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 12px ;
+  border: none;
+  outline: none;
+  width: 240px;
+  overflow:hidden; 
+  resize:none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.uploaded-image{
+  height: 180px;
+  width: 240px;
+  border-radius: 5px;
+}

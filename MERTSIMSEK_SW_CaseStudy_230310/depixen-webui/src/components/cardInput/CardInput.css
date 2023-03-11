@@ -1,0 +1,64 @@
+.card-for-input {
+    display: flex;
+    flex-direction: column;
+    background-color: #DCD7C9;
+    border-radius: 0 10px 10px 10px;
+    padding: 20px 15px 15px 15px;
+    border: 1px solid #fff;
+  }
+
+  .image-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A27B5C;
+    height: 180px;
+    width: 240px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .image-upload-sign{
+    font-size: 40px;
+  }
+  
+  .image-upload-text{
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .submit-button{
+    
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .submit-button-active{
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #035000;
+    cursor: pointer;
+  }
+
+  .button-align{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-for-input:after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 51.5%;
+    background: white;
+    width: 40%;
+    height: 2px;
+  }
