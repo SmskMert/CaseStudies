@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    expose:
+    - '5439'
+    ports:
+      - '5439:5439'
+    volumes:
+      - depixen-volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=depixen-pass
+    command: -p 5439
+
+
+  api:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - PORT=8080
+      - DATABASE_URL=db
+    depends_on:
+      - db
+
+volumes:
+  depixen-volume:
+    driver: local
