@@ -1,13 +1,16 @@
 FROM golang
 
-RUN mkdir /app
-
-ADD . /app
-
 WORKDIR /app
 
-RUN go build -o main ./cmd/server/main.go
+COPY go.mod .
+COPY go.sum .
+
+RUN go mod download
+
+COPY . .
+
+RUN go build -o /depixen ./cmd/server/main.go
 
 EXPOSE 8080
 
-CMD [ "/app/main" ]
+CMD [ "/depixen" ]
