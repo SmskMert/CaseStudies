@@ -11,10 +11,12 @@ import (
 
 func main() {
     log.Print("server has started")
+
     //start the db
     pgdb, err := db.StartDB()
     if err != nil {
         log.Printf("error starting the database %v", err)
+
     }
     //get the router of the API by passing the db
     router := api.StartAPI(pgdb)

@@ -4,16 +4,15 @@ services:
   db:
     image: postgres
     restart: always
-    expose:
-    - '5439'
-    ports:
-      - '5439:5439'
     volumes:
       - depixen-volume:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=depixen-pass
     command: -p 5439
-
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "db", "-p", "5439", "-U", "postgres"]
+      interval: 5s
+      retries: 5
 
   api:
     build: ./depixen-services
@@ -23,14 +22,15 @@ services:
       - PORT=8080
       - DATABASE_URL=db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   web:
     build: ./depixen-webui
     ports:
       - "3000:3000"
     depends_on:
-      - api
+     - api
 
 
 volumes:
